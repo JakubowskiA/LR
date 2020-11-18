@@ -17,6 +17,7 @@ class Header extends Component {
  }
 }
 
+//Takes targeted pieces of state from Redux store and maps them component's props
 function mapStateToProps(state) {
  return {
   dogLikes: state.dogLikes,
@@ -30,6 +31,7 @@ function mapStateToProps(state) {
 {...props, returneObj} */
 }
 
+//Takes actions and maps them to component's props as functional props
 function mapDispatchToProps(dispatch) {
  return {
   addDogLike: () => dispatch({ type: 'LIKE_DOG' })
